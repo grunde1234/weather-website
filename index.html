@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Weather</title>
+</head>
+<body>
+
+    <div id="loader">
+        <i class="fa-solid fa-cloud fa-beat-fade" style="color: #74C0FC;"></i>
+       
+    </div>
+
+    <div class="container" id="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter Location" autocomplete="on" class="js-search">
+            <button class="js-button fa-solid fa-magnifying-glass fa-shake"></button>
+        </div>
+
+        <div id="not-found">
+            <i class="fa-solid fa-cloud-rain fa-fade" style="color: #74C0FC;"></i>
+            <p>Invalid search</p>
+        </div>
+
+        <div id="weather-retrieved">
+            <div id="condition"></div>
+            <p class="temp js-temp"></p>
+            <p class="description"></p>
+        </div>
+<!-- humidity -->
+        <div class="weather-info">
+            <div class="humidity">
+            <i class="fa-solid fa-water"></i>
+            <div class="text">
+                <span class="js-humidity-p"></span>
+                <p>Humidity</p>
+                </div>
+            </div>
+<!-- wind -->
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span class="wind-speed"></span>
+                    <p>Wind Speed</p>
+                    </div>
+                </div>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script defer src="index.js"></script>
+</body>
+</html>
